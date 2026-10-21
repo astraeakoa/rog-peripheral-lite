@@ -1,0 +1,1 @@
+{"Version":1,"Macro":{"Name":"复制","Steps":[{"Action":"Down","Key":"LControlKey"},{"Action":"Press","Key":"C"},{"Action":"Up","Key":"LControlKey"},{"Action":"Delay","Milliseconds":100}],"Repeat":1,"Trigger":"Once","Interval":50}}

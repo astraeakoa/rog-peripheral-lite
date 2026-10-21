@@ -1,24 +1,28 @@
 name: Build
-
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
   workflow_dispatch:
-
 permissions:
   contents: read
-
 jobs:
-  build:
-    runs-on: windows-2022
+  windows:
+    runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v7
-    - name: Setup dotnet
-      uses: actions/setup-dotnet@v5
-      with:
-        dotnet-version: '10.0.x'
-    - name: Build
-      run: |
-        dotnet build app/GHelper.sln
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Test and package
+        shell: pwsh
+        run: ./build.ps1
+      - name: Archive corresponding source
+        shell: pwsh
+        run: git archive --format=zip --output=ROGPeripheral-source.zip HEAD
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ROGPeripheral-${{ github.sha }}
+          path: |
+            ROGPeripheral-win-x64.zip
+            ROGPeripheral-source.zip

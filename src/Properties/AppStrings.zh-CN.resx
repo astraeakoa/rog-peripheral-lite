@@ -1,0 +1,312 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms</value>
+  </resheader>
+  <data xml:space="preserve" name="AlreadyRunning">
+    <value>程序已在运行，请从系统托盘打开。</value>
+  </data>
+  <data xml:space="preserve" name="Open">
+    <value>打开</value>
+  </data>
+  <data xml:space="preserve" name="StopMacros">
+    <value>停止宏</value>
+  </data>
+  <data xml:space="preserve" name="Exit">
+    <value>退出</value>
+  </data>
+  <data xml:space="preserve" name="TrayTitle">
+    <value>ROG Peripheral · 宏运行中需常驻</value>
+  </data>
+  <data xml:space="preserve" name="TrayHint">
+    <value>已最小化到托盘，宏仍可运行。右键托盘图标可退出。</value>
+  </data>
+  <data xml:space="preserve" name="ScanFailed">
+    <value>检测失败：</value>
+  </data>
+  <data xml:space="preserve" name="Peripherals">
+    <value>外设</value>
+  </data>
+  <data xml:space="preserve" name="NoDevices">
+    <value>未检测到外设，请连接 USB 线或接收器后刷新。</value>
+  </data>
+  <data xml:space="preserve" name="Macros">
+    <value>宏按键</value>
+  </data>
+  <data xml:space="preserve" name="Scanning">
+    <value>检测中…</value>
+  </data>
+  <data xml:space="preserve" name="Refresh">
+    <value>刷新设备</value>
+  </data>
+  <data xml:space="preserve" name="Bind">
+    <value>绑定到此按键</value>
+  </data>
+  <data xml:space="preserve" name="MacroTitle">
+    <value>宏按键 · ROG Peripheral</value>
+  </data>
+  <data xml:space="preserve" name="MacroHelp">
+    <value>软件宏 · 程序需常驻
+每个槽位使用 F13–F24 触发，多个设备共用。
+Ctrl + Alt + F12 停止执行；占用同键的原版组合键会被宏覆盖。
+Press 点按 · Down 按下 · Up 松开 · Delay 延迟（毫秒）</value>
+  </data>
+  <data xml:space="preserve" name="Name">
+    <value>名称</value>
+  </data>
+  <data xml:space="preserve" name="Repeat">
+    <value>每轮次数</value>
+  </data>
+  <data xml:space="preserve" name="Once">
+    <value>单次按下</value>
+  </data>
+  <data xml:space="preserve" name="Toggle">
+    <value>连续触发</value>
+  </data>
+  <data xml:space="preserve" name="Hold">
+    <value>按住触发</value>
+  </data>
+  <data xml:space="preserve" name="Trigger">
+    <value>触发方式</value>
+  </data>
+  <data xml:space="preserve" name="Interval">
+    <value>循环间隔 ms</value>
+  </data>
+  <data xml:space="preserve" name="OnceHint">
+    <value>按一次执行一轮</value>
+  </data>
+  <data xml:space="preserve" name="ToggleHint">
+    <value>再次按下停止</value>
+  </data>
+  <data xml:space="preserve" name="HoldHint">
+    <value>松开立即停止</value>
+  </data>
+  <data xml:space="preserve" name="InvalidAction">
+    <value>请选择有效的动作。</value>
+  </data>
+  <data xml:space="preserve" name="Action">
+    <value>动作</value>
+  </data>
+  <data xml:space="preserve" name="Key">
+    <value>按键</value>
+  </data>
+  <data xml:space="preserve" name="KeyHint">
+    <value>例如 A、LControlKey、Enter、Space</value>
+  </data>
+  <data xml:space="preserve" name="Delay">
+    <value>延迟 ms</value>
+  </data>
+  <data xml:space="preserve" name="Save">
+    <value>保存</value>
+  </data>
+  <data xml:space="preserve" name="Import">
+    <value>导入…</value>
+  </data>
+  <data xml:space="preserve" name="Export">
+    <value>导出…</value>
+  </data>
+  <data xml:space="preserve" name="CopyExample">
+    <value>复制示例</value>
+  </data>
+  <data xml:space="preserve" name="MoveUp">
+    <value>上移</value>
+  </data>
+  <data xml:space="preserve" name="MoveDown">
+    <value>下移</value>
+  </data>
+  <data xml:space="preserve" name="DeleteStep">
+    <value>删除步骤</value>
+  </data>
+  <data xml:space="preserve" name="ClearSlot">
+    <value>清除此槽位</value>
+  </data>
+  <data xml:space="preserve" name="Cleared">
+    <value>宏已清除；鼠标按键可用下方“恢复默认按键”恢复。</value>
+  </data>
+  <data xml:space="preserve" name="Stop">
+    <value>停止</value>
+  </data>
+  <data xml:space="preserve" name="Restore">
+    <value>恢复默认按键</value>
+  </data>
+  <data xml:space="preserve" name="Slot">
+    <value>宏 {0} / F{1}</value>
+  </data>
+  <data xml:space="preserve" name="MacroName">
+    <value>宏 {0}</value>
+  </data>
+  <data xml:space="preserve" name="IntegerDelay">
+    <value>延迟必须为整数。</value>
+  </data>
+  <data xml:space="preserve" name="Saved">
+    <value>已保存。绑定按键后，在目标窗口按该键执行。</value>
+  </data>
+  <data xml:space="preserve" name="ImportTitle">
+    <value>导入到当前宏槽位（预览后保存）</value>
+  </data>
+  <data xml:space="preserve" name="Imported">
+    <value>已导入 {0} 步；请检查后保存。</value>
+  </data>
+  <data xml:space="preserve" name="ExportTitle">
+    <value>导出当前编辑的宏</value>
+  </data>
+  <data xml:space="preserve" name="Exported">
+    <value>已导出；JSON / CSV 完整保留设置，AHK 以注释保存触发方式和重复次数。</value>
+  </data>
+  <data xml:space="preserve" name="Disconnected">
+    <value>设备已断开或尚未就绪，请重新打开宏编辑器。</value>
+  </data>
+  <data xml:space="preserve" name="Writing">
+    <value>正在写入当前鼠标配置…</value>
+  </data>
+  <data xml:space="preserve" name="ReadbackMismatch">
+    <value>设备回读结果与写入不一致，请重新同步后再试。</value>
+  </data>
+  <data xml:space="preserve" name="Restored">
+    <value>按键已恢复默认。</value>
+  </data>
+  <data xml:space="preserve" name="Bound">
+    <value>已写入当前鼠标配置。请在目标窗口测试；宏需程序常驻。</value>
+  </data>
+  <data xml:space="preserve" name="BindFailed">
+    <value>绑定失败：</value>
+  </data>
+  <data xml:space="preserve" name="FileFilter">
+    <value>ROG 宏 JSON (*.json)|*.json|CSV 步骤表 (*.csv)|*.csv|AutoHotkey 按键脚本 (*.ahk)|*.ahk</value>
+  </data>
+  <data xml:space="preserve" name="FileTooLarge">
+    <value>宏文件不能超过 1 MB。</value>
+  </data>
+  <data xml:space="preserve" name="ImportedName">
+    <value>导入的宏</value>
+  </data>
+  <data xml:space="preserve" name="EmptyJson">
+    <value>JSON 为空。</value>
+  </data>
+  <data xml:space="preserve" name="JsonVersion">
+    <value>不支持此 JSON 版本。</value>
+  </data>
+  <data xml:space="preserve" name="FileTypes">
+    <value>支持 .json、.csv、.ahk 文件。</value>
+  </data>
+  <data xml:space="preserve" name="MissingMacro">
+    <value>缺少宏内容。</value>
+  </data>
+  <data xml:space="preserve" name="InvalidMetadata">
+    <value>宏元数据无效。</value>
+  </data>
+  <data xml:space="preserve" name="CsvHeader">
+    <value>CSV 表头必须为 Action,Key,Milliseconds。</value>
+  </data>
+  <data xml:space="preserve" name="CsvRow">
+    <value>CSV 第 {0} 行格式无效。</value>
+  </data>
+  <data xml:space="preserve" name="CsvAction">
+    <value>CSV 第 {0} 行动作不支持。</value>
+  </data>
+  <data xml:space="preserve" name="OneHotkey">
+    <value>只支持一个热键块。</value>
+  </data>
+  <data xml:space="preserve" name="HotkeyLine">
+    <value>热键声明须单独一行。</value>
+  </data>
+  <data xml:space="preserve" name="AfterEnd">
+    <value>宏结束后仍有可执行语句。</value>
+  </data>
+  <data xml:space="preserve" name="AhkSubset">
+    <value>仅支持 Send/SendInput/SendEvent 和 Sleep；不支持循环、函数、鼠标命令或表达式。</value>
+  </data>
+  <data xml:space="preserve" name="AhkString">
+    <value>AHK v2 Send 参数必须为完整的字面量字符串。</value>
+  </data>
+  <data xml:space="preserve" name="TooManySteps">
+    <value>宏超过 500 步。</value>
+  </data>
+  <data xml:space="preserve" name="AhkLine">
+    <value>AHK 第 {0} 行：{1}</value>
+  </data>
+  <data xml:space="preserve" name="AhkBrace">
+    <value>AHK 热键块缺少结束大括号。</value>
+  </data>
+  <data xml:space="preserve" name="MissingKey">
+    <value>修饰键后缺少按键。</value>
+  </data>
+  <data xml:space="preserve" name="KeyBrace">
+    <value>按键大括号未闭合。</value>
+  </data>
+  <data xml:space="preserve" name="KeyExpression">
+    <value>无效按键表达式。</value>
+  </data>
+  <data xml:space="preserve" name="KeyOption">
+    <value>不支持此按键选项。</value>
+  </data>
+  <data xml:space="preserve" name="PlainText">
+    <value>普通文本仅支持英文字母、数字和空格；其他键请使用 {键名}。</value>
+  </data>
+  <data xml:space="preserve" name="Modifiers">
+    <value>Down/Up 请分别显式声明修饰键。</value>
+  </data>
+  <data xml:space="preserve" name="ExportFormat">
+    <value>不支持此导出格式。</value>
+  </data>
+  <data xml:space="preserve" name="InvalidMacroConfig">
+    <value>宏 {0} 配置无效：{1}</value>
+  </data>
+  <data xml:space="preserve" name="InvalidKey">
+    <value>无效按键：{0}（不允许 F13–F24 宏触发键）</value>
+  </data>
+  <data xml:space="preserve" name="MacroLimits">
+    <value>宏名称不能为空；步骤 1–500，重复 1–100 次。</value>
+  </data>
+  <data xml:space="preserve" name="TriggerLimits">
+    <value>触发方式无效或循环间隔不在 10–60000 毫秒范围内。</value>
+  </data>
+  <data xml:space="preserve" name="NullStep">
+    <value>宏步骤不能为空。</value>
+  </data>
+  <data xml:space="preserve" name="DelayLimits">
+    <value>延迟须为 1–60000 毫秒。</value>
+  </data>
+  <data xml:space="preserve" name="ActionOptions">
+    <value>动作须为 Press / Down / Up / Delay。</value>
+  </data>
+  <data xml:space="preserve" name="DuplicateDown">
+    <value>重复按下 {0}</value>
+  </data>
+  <data xml:space="preserve" name="NotHeld">
+    <value>{0} 尚未按下</value>
+  </data>
+  <data xml:space="preserve" name="AlreadyHeld">
+    <value>{0} 已处于按下状态</value>
+  </data>
+  <data xml:space="preserve" name="UnbalancedKeys">
+    <value>每个 Down 必须有对应的 Up。</value>
+  </data>
+  <data xml:space="preserve" name="DurationLimit">
+    <value>宏总延迟不能超过 10 分钟。</value>
+  </data>
+  <data xml:space="preserve" name="InputFailed">
+    <value>无法发送按键；目标程序的权限可能更高。</value>
+  </data>
+  <data xml:space="preserve" name="HookFailed">
+    <value>无法监听按键按下/松开，宏触发不可用。</value>
+  </data>
+  <data xml:space="preserve" name="HotkeyFailed">
+    <value>{0} 热键注册失败，可能被其他程序占用。</value>
+  </data>
+  <data xml:space="preserve" name="Shortcut">
+    <value>快捷键</value>
+  </data>
+  <data xml:space="preserve" name="PlaybackFailed">
+    <value>宏执行失败</value>
+  </data>
+</root>

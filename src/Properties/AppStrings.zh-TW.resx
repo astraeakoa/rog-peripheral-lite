@@ -1,0 +1,312 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms</value>
+  </resheader>
+  <data xml:space="preserve" name="AlreadyRunning">
+    <value>程式已在執行，請從系統匣開啟。</value>
+  </data>
+  <data xml:space="preserve" name="Open">
+    <value>開啟</value>
+  </data>
+  <data xml:space="preserve" name="StopMacros">
+    <value>停止巨集</value>
+  </data>
+  <data xml:space="preserve" name="Exit">
+    <value>結束</value>
+  </data>
+  <data xml:space="preserve" name="TrayTitle">
+    <value>ROG Peripheral · 巨集執行時需常駐</value>
+  </data>
+  <data xml:space="preserve" name="TrayHint">
+    <value>已最小化至系統匣，巨集仍可執行。右鍵點選系統匣圖示可結束。</value>
+  </data>
+  <data xml:space="preserve" name="ScanFailed">
+    <value>偵測失敗：</value>
+  </data>
+  <data xml:space="preserve" name="Peripherals">
+    <value>周邊裝置</value>
+  </data>
+  <data xml:space="preserve" name="NoDevices">
+    <value>未偵測到裝置，請連接 USB 線或接收器後重新整理。</value>
+  </data>
+  <data xml:space="preserve" name="Macros">
+    <value>巨集按鍵</value>
+  </data>
+  <data xml:space="preserve" name="Scanning">
+    <value>偵測中…</value>
+  </data>
+  <data xml:space="preserve" name="Refresh">
+    <value>重新整理裝置</value>
+  </data>
+  <data xml:space="preserve" name="Bind">
+    <value>綁定至此按鍵</value>
+  </data>
+  <data xml:space="preserve" name="MacroTitle">
+    <value>巨集按鍵 · ROG Peripheral</value>
+  </data>
+  <data xml:space="preserve" name="MacroHelp">
+    <value>軟體巨集 · 程式需常駐
+每個欄位使用 F13–F24 觸發，多個裝置共用。
+Ctrl + Alt + F12 停止執行；同鍵的原版組合鍵會被巨集覆蓋。
+Press 點按 · Down 按下 · Up 放開 · Delay 延遲（毫秒）</value>
+  </data>
+  <data xml:space="preserve" name="Name">
+    <value>名稱</value>
+  </data>
+  <data xml:space="preserve" name="Repeat">
+    <value>每輪次數</value>
+  </data>
+  <data xml:space="preserve" name="Once">
+    <value>單次按下</value>
+  </data>
+  <data xml:space="preserve" name="Toggle">
+    <value>連續觸發</value>
+  </data>
+  <data xml:space="preserve" name="Hold">
+    <value>按住觸發</value>
+  </data>
+  <data xml:space="preserve" name="Trigger">
+    <value>觸發方式</value>
+  </data>
+  <data xml:space="preserve" name="Interval">
+    <value>循環間隔 ms</value>
+  </data>
+  <data xml:space="preserve" name="OnceHint">
+    <value>按一次執行一輪</value>
+  </data>
+  <data xml:space="preserve" name="ToggleHint">
+    <value>再次按下停止</value>
+  </data>
+  <data xml:space="preserve" name="HoldHint">
+    <value>放開立即停止</value>
+  </data>
+  <data xml:space="preserve" name="InvalidAction">
+    <value>請選擇有效的動作。</value>
+  </data>
+  <data xml:space="preserve" name="Action">
+    <value>動作</value>
+  </data>
+  <data xml:space="preserve" name="Key">
+    <value>按鍵</value>
+  </data>
+  <data xml:space="preserve" name="KeyHint">
+    <value>例如 A、LControlKey、Enter、Space</value>
+  </data>
+  <data xml:space="preserve" name="Delay">
+    <value>延遲 ms</value>
+  </data>
+  <data xml:space="preserve" name="Save">
+    <value>儲存</value>
+  </data>
+  <data xml:space="preserve" name="Import">
+    <value>匯入…</value>
+  </data>
+  <data xml:space="preserve" name="Export">
+    <value>匯出…</value>
+  </data>
+  <data xml:space="preserve" name="CopyExample">
+    <value>複製範例</value>
+  </data>
+  <data xml:space="preserve" name="MoveUp">
+    <value>上移</value>
+  </data>
+  <data xml:space="preserve" name="MoveDown">
+    <value>下移</value>
+  </data>
+  <data xml:space="preserve" name="DeleteStep">
+    <value>刪除步驟</value>
+  </data>
+  <data xml:space="preserve" name="ClearSlot">
+    <value>清除此欄位</value>
+  </data>
+  <data xml:space="preserve" name="Cleared">
+    <value>巨集已清除；滑鼠按鍵可用下方「還原預設按鍵」還原。</value>
+  </data>
+  <data xml:space="preserve" name="Stop">
+    <value>停止</value>
+  </data>
+  <data xml:space="preserve" name="Restore">
+    <value>還原預設按鍵</value>
+  </data>
+  <data xml:space="preserve" name="Slot">
+    <value>巨集 {0} / F{1}</value>
+  </data>
+  <data xml:space="preserve" name="MacroName">
+    <value>巨集 {0}</value>
+  </data>
+  <data xml:space="preserve" name="IntegerDelay">
+    <value>延遲必須為整數。</value>
+  </data>
+  <data xml:space="preserve" name="Saved">
+    <value>已儲存。綁定按鍵後，在目標視窗按該鍵執行。</value>
+  </data>
+  <data xml:space="preserve" name="ImportTitle">
+    <value>匯入至目前巨集欄位（預覽後儲存）</value>
+  </data>
+  <data xml:space="preserve" name="Imported">
+    <value>已匯入 {0} 個步驟；請檢查後儲存。</value>
+  </data>
+  <data xml:space="preserve" name="ExportTitle">
+    <value>匯出目前編輯的巨集</value>
+  </data>
+  <data xml:space="preserve" name="Exported">
+    <value>已匯出；JSON / CSV 完整保留設定，AHK 以註解儲存觸發方式和重複次數。</value>
+  </data>
+  <data xml:space="preserve" name="Disconnected">
+    <value>裝置已中斷或尚未就緒，請重新開啟巨集編輯器。</value>
+  </data>
+  <data xml:space="preserve" name="Writing">
+    <value>正在寫入目前滑鼠設定檔…</value>
+  </data>
+  <data xml:space="preserve" name="ReadbackMismatch">
+    <value>裝置讀回結果與寫入不一致，請重新同步後再試。</value>
+  </data>
+  <data xml:space="preserve" name="Restored">
+    <value>按鍵已還原為預設值。</value>
+  </data>
+  <data xml:space="preserve" name="Bound">
+    <value>已寫入目前滑鼠設定檔。請在目標視窗測試；巨集需程式常駐。</value>
+  </data>
+  <data xml:space="preserve" name="BindFailed">
+    <value>綁定失敗：</value>
+  </data>
+  <data xml:space="preserve" name="FileFilter">
+    <value>ROG 巨集 JSON (*.json)|*.json|CSV 步驟表 (*.csv)|*.csv|AutoHotkey 按鍵指令碼 (*.ahk)|*.ahk</value>
+  </data>
+  <data xml:space="preserve" name="FileTooLarge">
+    <value>巨集檔案不能超過 1 MB。</value>
+  </data>
+  <data xml:space="preserve" name="ImportedName">
+    <value>匯入的巨集</value>
+  </data>
+  <data xml:space="preserve" name="EmptyJson">
+    <value>JSON 為空。</value>
+  </data>
+  <data xml:space="preserve" name="JsonVersion">
+    <value>不支援此 JSON 版本。</value>
+  </data>
+  <data xml:space="preserve" name="FileTypes">
+    <value>支援 .json、.csv、.ahk 檔案。</value>
+  </data>
+  <data xml:space="preserve" name="MissingMacro">
+    <value>缺少巨集內容。</value>
+  </data>
+  <data xml:space="preserve" name="InvalidMetadata">
+    <value>巨集中繼資料無效。</value>
+  </data>
+  <data xml:space="preserve" name="CsvHeader">
+    <value>CSV 標頭必須為 Action,Key,Milliseconds。</value>
+  </data>
+  <data xml:space="preserve" name="CsvRow">
+    <value>CSV 第 {0} 行格式無效。</value>
+  </data>
+  <data xml:space="preserve" name="CsvAction">
+    <value>CSV 第 {0} 行動作不支援。</value>
+  </data>
+  <data xml:space="preserve" name="OneHotkey">
+    <value>僅支援一個快捷鍵區塊。</value>
+  </data>
+  <data xml:space="preserve" name="HotkeyLine">
+    <value>快捷鍵宣告須獨立一行。</value>
+  </data>
+  <data xml:space="preserve" name="AfterEnd">
+    <value>巨集結束後仍有可執行陳述式。</value>
+  </data>
+  <data xml:space="preserve" name="AhkSubset">
+    <value>僅支援 Send/SendInput/SendEvent 和 Sleep；不支援迴圈、函式、滑鼠命令或運算式。</value>
+  </data>
+  <data xml:space="preserve" name="AhkString">
+    <value>AHK v2 Send 參數必須為完整的字串常值。</value>
+  </data>
+  <data xml:space="preserve" name="TooManySteps">
+    <value>巨集超過 500 個步驟。</value>
+  </data>
+  <data xml:space="preserve" name="AhkLine">
+    <value>AHK 第 {0} 行：{1}</value>
+  </data>
+  <data xml:space="preserve" name="AhkBrace">
+    <value>AHK 快捷鍵區塊缺少結束大括號。</value>
+  </data>
+  <data xml:space="preserve" name="MissingKey">
+    <value>修飾鍵後缺少按鍵。</value>
+  </data>
+  <data xml:space="preserve" name="KeyBrace">
+    <value>按鍵大括號未閉合。</value>
+  </data>
+  <data xml:space="preserve" name="KeyExpression">
+    <value>無效的按鍵運算式。</value>
+  </data>
+  <data xml:space="preserve" name="KeyOption">
+    <value>不支援此按鍵選項。</value>
+  </data>
+  <data xml:space="preserve" name="PlainText">
+    <value>一般文字僅支援英文字母、數字和空格；其他鍵請使用 {鍵名}。</value>
+  </data>
+  <data xml:space="preserve" name="Modifiers">
+    <value>Down/Up 請分別明確宣告修飾鍵。</value>
+  </data>
+  <data xml:space="preserve" name="ExportFormat">
+    <value>不支援此匯出格式。</value>
+  </data>
+  <data xml:space="preserve" name="InvalidMacroConfig">
+    <value>巨集 {0} 設定無效：{1}</value>
+  </data>
+  <data xml:space="preserve" name="InvalidKey">
+    <value>無效按鍵：{0}（不允許 F13–F24 巨集觸發鍵）</value>
+  </data>
+  <data xml:space="preserve" name="MacroLimits">
+    <value>巨集名稱不能為空；步驟 1–500，重複 1–100 次。</value>
+  </data>
+  <data xml:space="preserve" name="TriggerLimits">
+    <value>觸發方式無效或循環間隔不在 10–60000 毫秒範圍內。</value>
+  </data>
+  <data xml:space="preserve" name="NullStep">
+    <value>巨集步驟不能為空。</value>
+  </data>
+  <data xml:space="preserve" name="DelayLimits">
+    <value>延遲須為 1–60000 毫秒。</value>
+  </data>
+  <data xml:space="preserve" name="ActionOptions">
+    <value>動作須為 Press / Down / Up / Delay。</value>
+  </data>
+  <data xml:space="preserve" name="DuplicateDown">
+    <value>重複按下 {0}</value>
+  </data>
+  <data xml:space="preserve" name="NotHeld">
+    <value>{0} 尚未按下</value>
+  </data>
+  <data xml:space="preserve" name="AlreadyHeld">
+    <value>{0} 已處於按下狀態</value>
+  </data>
+  <data xml:space="preserve" name="UnbalancedKeys">
+    <value>每個 Down 必須有對應的 Up。</value>
+  </data>
+  <data xml:space="preserve" name="DurationLimit">
+    <value>巨集總延遲不能超過 10 分鐘。</value>
+  </data>
+  <data xml:space="preserve" name="InputFailed">
+    <value>無法傳送按鍵；目標程式的權限可能較高。</value>
+  </data>
+  <data xml:space="preserve" name="HookFailed">
+    <value>無法監聽按鍵按下/放開，巨集觸發無法使用。</value>
+  </data>
+  <data xml:space="preserve" name="HotkeyFailed">
+    <value>{0} 快捷鍵註冊失敗，可能被其他程式占用。</value>
+  </data>
+  <data xml:space="preserve" name="Shortcut">
+    <value>快捷鍵</value>
+  </data>
+  <data xml:space="preserve" name="PlaybackFailed">
+    <value>巨集執行失敗</value>
+  </data>
+</root>

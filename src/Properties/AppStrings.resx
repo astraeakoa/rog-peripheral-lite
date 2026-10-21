@@ -1,0 +1,312 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms</value>
+  </resheader>
+  <data xml:space="preserve" name="AlreadyRunning">
+    <value>Already running. Open the app from the system tray.</value>
+  </data>
+  <data xml:space="preserve" name="Open">
+    <value>Open</value>
+  </data>
+  <data xml:space="preserve" name="StopMacros">
+    <value>Stop macros</value>
+  </data>
+  <data xml:space="preserve" name="Exit">
+    <value>Exit</value>
+  </data>
+  <data xml:space="preserve" name="TrayTitle">
+    <value>ROG Peripheral · Keep running for macros</value>
+  </data>
+  <data xml:space="preserve" name="TrayHint">
+    <value>Minimized to tray; macros remain available. Right-click the tray icon to exit.</value>
+  </data>
+  <data xml:space="preserve" name="ScanFailed">
+    <value>Detection failed: </value>
+  </data>
+  <data xml:space="preserve" name="Peripherals">
+    <value>Peripherals</value>
+  </data>
+  <data xml:space="preserve" name="NoDevices">
+    <value>No devices found. Connect a USB cable or receiver and refresh.</value>
+  </data>
+  <data xml:space="preserve" name="Macros">
+    <value>Macros</value>
+  </data>
+  <data xml:space="preserve" name="Scanning">
+    <value>Detecting…</value>
+  </data>
+  <data xml:space="preserve" name="Refresh">
+    <value>Refresh devices</value>
+  </data>
+  <data xml:space="preserve" name="Bind">
+    <value>Bind to button</value>
+  </data>
+  <data xml:space="preserve" name="MacroTitle">
+    <value>Macros · ROG Peripheral</value>
+  </data>
+  <data xml:space="preserve" name="MacroHelp">
+    <value>Software macros · Keep the app running
+Slots use F13–F24 and are shared across devices.
+Ctrl + Alt + F12 stops playback; macros override combos on the same key.
+Press: tap · Down: hold · Up: release · Delay: wait (ms)</value>
+  </data>
+  <data xml:space="preserve" name="Name">
+    <value>Name</value>
+  </data>
+  <data xml:space="preserve" name="Repeat">
+    <value>Repeats</value>
+  </data>
+  <data xml:space="preserve" name="Once">
+    <value>Once</value>
+  </data>
+  <data xml:space="preserve" name="Toggle">
+    <value>Toggle repeat</value>
+  </data>
+  <data xml:space="preserve" name="Hold">
+    <value>While held</value>
+  </data>
+  <data xml:space="preserve" name="Trigger">
+    <value>Trigger</value>
+  </data>
+  <data xml:space="preserve" name="Interval">
+    <value>Interval ms</value>
+  </data>
+  <data xml:space="preserve" name="OnceHint">
+    <value>Press to run once</value>
+  </data>
+  <data xml:space="preserve" name="ToggleHint">
+    <value>Press again to stop</value>
+  </data>
+  <data xml:space="preserve" name="HoldHint">
+    <value>Release to stop</value>
+  </data>
+  <data xml:space="preserve" name="InvalidAction">
+    <value>Select a valid action.</value>
+  </data>
+  <data xml:space="preserve" name="Action">
+    <value>Action</value>
+  </data>
+  <data xml:space="preserve" name="Key">
+    <value>Key</value>
+  </data>
+  <data xml:space="preserve" name="KeyHint">
+    <value>Examples: A, LControlKey, Enter, Space</value>
+  </data>
+  <data xml:space="preserve" name="Delay">
+    <value>Delay ms</value>
+  </data>
+  <data xml:space="preserve" name="Save">
+    <value>Save</value>
+  </data>
+  <data xml:space="preserve" name="Import">
+    <value>Import…</value>
+  </data>
+  <data xml:space="preserve" name="Export">
+    <value>Export…</value>
+  </data>
+  <data xml:space="preserve" name="CopyExample">
+    <value>Copy example</value>
+  </data>
+  <data xml:space="preserve" name="MoveUp">
+    <value>Move up</value>
+  </data>
+  <data xml:space="preserve" name="MoveDown">
+    <value>Move down</value>
+  </data>
+  <data xml:space="preserve" name="DeleteStep">
+    <value>Delete step</value>
+  </data>
+  <data xml:space="preserve" name="ClearSlot">
+    <value>Clear slot</value>
+  </data>
+  <data xml:space="preserve" name="Cleared">
+    <value>Macro cleared. Use Restore default button below to reset the mouse binding.</value>
+  </data>
+  <data xml:space="preserve" name="Stop">
+    <value>Stop</value>
+  </data>
+  <data xml:space="preserve" name="Restore">
+    <value>Restore default button</value>
+  </data>
+  <data xml:space="preserve" name="Slot">
+    <value>Macro {0} / F{1}</value>
+  </data>
+  <data xml:space="preserve" name="MacroName">
+    <value>Macro {0}</value>
+  </data>
+  <data xml:space="preserve" name="IntegerDelay">
+    <value>Delay must be an integer.</value>
+  </data>
+  <data xml:space="preserve" name="Saved">
+    <value>Saved. Bind a button, then press it in the target window.</value>
+  </data>
+  <data xml:space="preserve" name="ImportTitle">
+    <value>Import into current slot (review, then save)</value>
+  </data>
+  <data xml:space="preserve" name="Imported">
+    <value>Imported {0} steps. Review and save.</value>
+  </data>
+  <data xml:space="preserve" name="ExportTitle">
+    <value>Export current macro</value>
+  </data>
+  <data xml:space="preserve" name="Exported">
+    <value>Exported. JSON/CSV preserve settings; AHK stores trigger and repeats in comments.</value>
+  </data>
+  <data xml:space="preserve" name="Disconnected">
+    <value>Device disconnected or not ready. Reopen the macro editor.</value>
+  </data>
+  <data xml:space="preserve" name="Writing">
+    <value>Writing current mouse profile…</value>
+  </data>
+  <data xml:space="preserve" name="ReadbackMismatch">
+    <value>Device readback differs from the written value. Resync and retry.</value>
+  </data>
+  <data xml:space="preserve" name="Restored">
+    <value>Default button restored.</value>
+  </data>
+  <data xml:space="preserve" name="Bound">
+    <value>Written to current mouse profile. Test in your target window; keep the app running.</value>
+  </data>
+  <data xml:space="preserve" name="BindFailed">
+    <value>Binding failed: </value>
+  </data>
+  <data xml:space="preserve" name="FileFilter">
+    <value>ROG macro JSON (*.json)|*.json|CSV steps (*.csv)|*.csv|AutoHotkey key script (*.ahk)|*.ahk</value>
+  </data>
+  <data xml:space="preserve" name="FileTooLarge">
+    <value>Macro file must not exceed 1 MB.</value>
+  </data>
+  <data xml:space="preserve" name="ImportedName">
+    <value>Imported macro</value>
+  </data>
+  <data xml:space="preserve" name="EmptyJson">
+    <value>JSON is empty.</value>
+  </data>
+  <data xml:space="preserve" name="JsonVersion">
+    <value>Unsupported JSON version.</value>
+  </data>
+  <data xml:space="preserve" name="FileTypes">
+    <value>Supported files: .json, .csv, .ahk.</value>
+  </data>
+  <data xml:space="preserve" name="MissingMacro">
+    <value>Macro content is missing.</value>
+  </data>
+  <data xml:space="preserve" name="InvalidMetadata">
+    <value>Invalid macro metadata.</value>
+  </data>
+  <data xml:space="preserve" name="CsvHeader">
+    <value>CSV header must be Action,Key,Milliseconds.</value>
+  </data>
+  <data xml:space="preserve" name="CsvRow">
+    <value>Invalid CSV format at line {0}.</value>
+  </data>
+  <data xml:space="preserve" name="CsvAction">
+    <value>Unsupported CSV action at line {0}.</value>
+  </data>
+  <data xml:space="preserve" name="OneHotkey">
+    <value>Only one hotkey block is supported.</value>
+  </data>
+  <data xml:space="preserve" name="HotkeyLine">
+    <value>Hotkey declaration must be on its own line.</value>
+  </data>
+  <data xml:space="preserve" name="AfterEnd">
+    <value>Executable statements found after macro end.</value>
+  </data>
+  <data xml:space="preserve" name="AhkSubset">
+    <value>Only Send/SendInput/SendEvent and Sleep are supported; no loops, functions, mouse commands or expressions.</value>
+  </data>
+  <data xml:space="preserve" name="AhkString">
+    <value>AHK v2 Send requires a complete literal string.</value>
+  </data>
+  <data xml:space="preserve" name="TooManySteps">
+    <value>Macro exceeds 500 steps.</value>
+  </data>
+  <data xml:space="preserve" name="AhkLine">
+    <value>AHK line {0}: {1}</value>
+  </data>
+  <data xml:space="preserve" name="AhkBrace">
+    <value>AHK hotkey block is missing its closing brace.</value>
+  </data>
+  <data xml:space="preserve" name="MissingKey">
+    <value>Missing key after modifier.</value>
+  </data>
+  <data xml:space="preserve" name="KeyBrace">
+    <value>Unclosed key brace.</value>
+  </data>
+  <data xml:space="preserve" name="KeyExpression">
+    <value>Invalid key expression.</value>
+  </data>
+  <data xml:space="preserve" name="KeyOption">
+    <value>Unsupported key option.</value>
+  </data>
+  <data xml:space="preserve" name="PlainText">
+    <value>Plain text supports English letters, digits and spaces; use {KeyName} for other keys.</value>
+  </data>
+  <data xml:space="preserve" name="Modifiers">
+    <value>Declare modifiers explicitly with separate Down/Up steps.</value>
+  </data>
+  <data xml:space="preserve" name="ExportFormat">
+    <value>Unsupported export format.</value>
+  </data>
+  <data xml:space="preserve" name="InvalidMacroConfig">
+    <value>Invalid macro {0} configuration: {1}</value>
+  </data>
+  <data xml:space="preserve" name="InvalidKey">
+    <value>Invalid key: {0} (F13–F24 macro trigger keys are not allowed)</value>
+  </data>
+  <data xml:space="preserve" name="MacroLimits">
+    <value>Macro needs a name, 1–500 steps and 1–100 repeats.</value>
+  </data>
+  <data xml:space="preserve" name="TriggerLimits">
+    <value>Invalid trigger or interval outside 10–60000 ms.</value>
+  </data>
+  <data xml:space="preserve" name="NullStep">
+    <value>Macro step cannot be null.</value>
+  </data>
+  <data xml:space="preserve" name="DelayLimits">
+    <value>Delay must be 1–60000 ms.</value>
+  </data>
+  <data xml:space="preserve" name="ActionOptions">
+    <value>Action must be Press / Down / Up / Delay.</value>
+  </data>
+  <data xml:space="preserve" name="DuplicateDown">
+    <value>Duplicate key down: {0}</value>
+  </data>
+  <data xml:space="preserve" name="NotHeld">
+    <value>{0} is not held</value>
+  </data>
+  <data xml:space="preserve" name="AlreadyHeld">
+    <value>{0} is already held</value>
+  </data>
+  <data xml:space="preserve" name="UnbalancedKeys">
+    <value>Every Down must have a matching Up.</value>
+  </data>
+  <data xml:space="preserve" name="DurationLimit">
+    <value>Total macro delay must not exceed 10 minutes.</value>
+  </data>
+  <data xml:space="preserve" name="InputFailed">
+    <value>Cannot send key input; the target app may have higher privileges.</value>
+  </data>
+  <data xml:space="preserve" name="HookFailed">
+    <value>Cannot listen for key presses/releases; macro triggers are unavailable.</value>
+  </data>
+  <data xml:space="preserve" name="HotkeyFailed">
+    <value>Cannot register {0}; another app may be using this hotkey.</value>
+  </data>
+  <data xml:space="preserve" name="Shortcut">
+    <value>Shortcut</value>
+  </data>
+  <data xml:space="preserve" name="PlaybackFailed">
+    <value>Macro playback failed</value>
+  </data>
+</root>

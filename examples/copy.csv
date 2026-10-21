@@ -1,0 +1,5 @@
+Action,Key,Milliseconds
+Down,LControlKey,0
+Press,C,0
+Up,LControlKey,0
+Delay,,100
