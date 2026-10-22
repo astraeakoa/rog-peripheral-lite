@@ -58,7 +58,7 @@
     <value>軟體巨集 · 程式需常駐
 每個欄位使用 F13–F24 觸發，多個裝置共用。
 Ctrl + Alt + F12 停止執行；同鍵的原版組合鍵會被巨集覆蓋。
-Press 點按 · Down 按下 · Up 放開 · Delay 延遲（毫秒）</value>
+Down / Up：等待後執行動作 · Delay：僅等待（毫秒）</value>
   </data>
   <data xml:space="preserve" name="Name">
     <value>名稱</value>
@@ -100,10 +100,10 @@ Press 點按 · Down 按下 · Up 放開 · Delay 延遲（毫秒）</value>
     <value>按鍵</value>
   </data>
   <data xml:space="preserve" name="KeyHint">
-    <value>例如 A、LControlKey、Enter、Space</value>
+    <value>例如 A、LControlKey、Enter、Space; LButton, RButton</value>
   </data>
   <data xml:space="preserve" name="Delay">
-    <value>延遲 ms</value>
+    <value>延遲</value>
   </data>
   <data xml:space="preserve" name="Save">
     <value>儲存</value>
@@ -181,7 +181,7 @@ Press 點按 · Down 按下 · Up 放開 · Delay 延遲（毫秒）</value>
     <value>綁定失敗：</value>
   </data>
   <data xml:space="preserve" name="FileFilter">
-    <value>ROG 巨集 JSON (*.json)|*.json|CSV 步驟表 (*.csv)|*.csv|AutoHotkey 按鍵指令碼 (*.ahk)|*.ahk</value>
+    <value>ROG 巨集 JSON (*.json)|*.json|CSV 步驟表 (*.csv)|*.csv|AutoHotkey 按鍵指令碼 (*.ahk)|*.ahk|Armoury Crate GMAC (*.gmac)|*.gmac</value>
   </data>
   <data xml:space="preserve" name="FileTooLarge">
     <value>巨集檔案不能超過 1 MB。</value>
@@ -196,7 +196,7 @@ Press 點按 · Down 按下 · Up 放開 · Delay 延遲（毫秒）</value>
     <value>不支援此 JSON 版本。</value>
   </data>
   <data xml:space="preserve" name="FileTypes">
-    <value>支援 .json、.csv、.ahk 檔案。</value>
+    <value>支援 .json、.csv、.ahk / .gmac 檔案。</value>
   </data>
   <data xml:space="preserve" name="MissingMacro">
     <value>缺少巨集內容。</value>
@@ -309,4 +309,37 @@ Press 點按 · Down 按下 · Up 放開 · Delay 延遲（毫秒）</value>
   <data xml:space="preserve" name="PlaybackFailed">
     <value>巨集執行失敗</value>
   </data>
-</root>
+  <data name="GmacKeyUnsupported" xml:space="preserve">
+    <value>尚不支援此 GMAC 按鍵編碼。</value>
+  </data>
+  <data name="GmacMarker" xml:space="preserve">
+    <value>GMAC 必須以獨立一行的 1 結束。</value>
+  </data>
+  <data name="GmacRow" xml:space="preserve">
+    <value>GMAC 事件格式無效或不支援。</value>
+  </data>
+  <data name="GmacKeyMismatch" xml:space="preserve">
+    <value>GMAC 按鍵名稱與編碼不符，或不適用於目前鍵盤配置。</value>
+  </data>
+  <data name="GmacLine" xml:space="preserve">
+    <value>GMAC 第 {0} 行：{1}</value>
+  </data>
+  <data name="GmacExportWarning" xml:space="preserve">
+    <value>GMAC 僅儲存步驟，不儲存名稱、觸發方式、重複次數或循環間隔。是否繼續？</value>
+  </data>
+  <data name="GmacExported" xml:space="preserve">
+    <value>GMAC 已匯出並保留尾部標記 1；不包含播放設定。</value>
+  </data>
+  <data name="MouseHelp" xml:space="preserve">
+    <value>滑鼠：LButton 左鍵 / RButton 右鍵</value>
+  </data>
+<data name="InsertStep" xml:space="preserve"><value>插入</value></data>
+<data name="ActionDelayLimits" xml:space="preserve"><value>動作前等待須為 0–60000 毫秒。</value></data>
+<data name="MouseRight" xml:space="preserve"><value>滑鼠右鍵</value></data>
+<data name="DeviceLabel" xml:space="preserve"><value>裝置</value></data>
+<data name="EditorHint" xml:space="preserve"><value>Down / Up：延遲後執行動作（毫秒）；Delay：僅等待。Ctrl + Alt + F12 停止巨集。</value></data>
+<data name="MouseLeft" xml:space="preserve"><value>滑鼠左鍵</value></data>
+<data name="ButtonLabel" xml:space="preserve"><value>按鍵綁定</value></data>
+<data name="DelayInputHint" xml:space="preserve"><value>僅限整數毫秒：Down / Up 為 0–60000；Delay 為 1–60000。</value></data>
+<data name="MacroSlotLabel" xml:space="preserve"><value>巨集欄位</value></data>
+<data name="MacroEditSection" xml:space="preserve"><value>巨集編輯</value></data><data name="BindingSection" xml:space="preserve"><value>按鍵綁定</value></data></root>

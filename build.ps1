@@ -31,6 +31,6 @@ try {
         }
     }
     New-Item -ItemType Directory -Force "$OutputDir/docs" | Out-Null
-    Copy-Item docs/MACRO_FORMATS.md,docs/CHANGELOG.md "$OutputDir/docs"
+    Copy-Item docs/MACRO_FORMATS.md,docs/CHANGELOG.md,docs/MACRO_EDITOR_QA.md "$OutputDir/docs"
     Compress-Archive -Path "$OutputDir/ROGPeripheral.exe","$OutputDir/LICENSE","$OutputDir/README.md","$OutputDir/THIRD_PARTY_NOTICES.md","$OutputDir/MACRO_FORMATS.md","$OutputDir/examples","$OutputDir/licenses","$OutputDir/docs" -DestinationPath ROGPeripheral-win-x64.zip -Force
 } finally { Pop-Location }

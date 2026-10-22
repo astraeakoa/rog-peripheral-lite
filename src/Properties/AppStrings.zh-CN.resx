@@ -58,7 +58,7 @@
     <value>软件宏 · 程序需常驻
 每个槽位使用 F13–F24 触发，多个设备共用。
 Ctrl + Alt + F12 停止执行；占用同键的原版组合键会被宏覆盖。
-Press 点按 · Down 按下 · Up 松开 · Delay 延迟（毫秒）</value>
+Down / Up：等待后执行动作 · Delay：仅等待（毫秒）</value>
   </data>
   <data xml:space="preserve" name="Name">
     <value>名称</value>
@@ -100,10 +100,10 @@ Press 点按 · Down 按下 · Up 松开 · Delay 延迟（毫秒）</value>
     <value>按键</value>
   </data>
   <data xml:space="preserve" name="KeyHint">
-    <value>例如 A、LControlKey、Enter、Space</value>
+    <value>例如 A、LControlKey、Enter、Space; LButton, RButton</value>
   </data>
   <data xml:space="preserve" name="Delay">
-    <value>延迟 ms</value>
+    <value>延迟</value>
   </data>
   <data xml:space="preserve" name="Save">
     <value>保存</value>
@@ -181,7 +181,7 @@ Press 点按 · Down 按下 · Up 松开 · Delay 延迟（毫秒）</value>
     <value>绑定失败：</value>
   </data>
   <data xml:space="preserve" name="FileFilter">
-    <value>ROG 宏 JSON (*.json)|*.json|CSV 步骤表 (*.csv)|*.csv|AutoHotkey 按键脚本 (*.ahk)|*.ahk</value>
+    <value>ROG 宏 JSON (*.json)|*.json|CSV 步骤表 (*.csv)|*.csv|AutoHotkey 按键脚本 (*.ahk)|*.ahk|Armoury Crate GMAC (*.gmac)|*.gmac</value>
   </data>
   <data xml:space="preserve" name="FileTooLarge">
     <value>宏文件不能超过 1 MB。</value>
@@ -196,7 +196,7 @@ Press 点按 · Down 按下 · Up 松开 · Delay 延迟（毫秒）</value>
     <value>不支持此 JSON 版本。</value>
   </data>
   <data xml:space="preserve" name="FileTypes">
-    <value>支持 .json、.csv、.ahk 文件。</value>
+    <value>支持 .json、.csv、.ahk / .gmac 文件。</value>
   </data>
   <data xml:space="preserve" name="MissingMacro">
     <value>缺少宏内容。</value>
@@ -309,4 +309,37 @@ Press 点按 · Down 按下 · Up 松开 · Delay 延迟（毫秒）</value>
   <data xml:space="preserve" name="PlaybackFailed">
     <value>宏执行失败</value>
   </data>
-</root>
+  <data name="GmacKeyUnsupported" xml:space="preserve">
+    <value>尚不支持此 GMAC 按键编码。</value>
+  </data>
+  <data name="GmacMarker" xml:space="preserve">
+    <value>GMAC 必须以独立一行的 1 结束。</value>
+  </data>
+  <data name="GmacRow" xml:space="preserve">
+    <value>GMAC 事件格式无效或不支持。</value>
+  </data>
+  <data name="GmacKeyMismatch" xml:space="preserve">
+    <value>GMAC 按键名称与编码不匹配，或不适用于当前键盘布局。</value>
+  </data>
+  <data name="GmacLine" xml:space="preserve">
+    <value>GMAC 第 {0} 行：{1}</value>
+  </data>
+  <data name="GmacExportWarning" xml:space="preserve">
+    <value>GMAC 仅保存步骤，不保存名称、触发方式、重复次数或循环间隔。是否继续？</value>
+  </data>
+  <data name="GmacExported" xml:space="preserve">
+    <value>GMAC 已导出并保留尾部标记 1；不包含播放设置。</value>
+  </data>
+  <data name="MouseHelp" xml:space="preserve">
+    <value>鼠标：LButton 左键 / RButton 右键</value>
+  </data>
+<data name="InsertStep" xml:space="preserve"><value>插入</value></data>
+<data name="ActionDelayLimits" xml:space="preserve"><value>动作前等待须为 0–60000 毫秒。</value></data>
+<data name="MouseRight" xml:space="preserve"><value>鼠标右键</value></data>
+<data name="DeviceLabel" xml:space="preserve"><value>设备</value></data>
+<data name="EditorHint" xml:space="preserve"><value>Down / Up：延迟后执行动作（毫秒）；Delay：仅等待。Ctrl + Alt + F12 停止宏。</value></data>
+<data name="MouseLeft" xml:space="preserve"><value>鼠标左键</value></data>
+<data name="ButtonLabel" xml:space="preserve"><value>按键绑定</value></data>
+<data name="DelayInputHint" xml:space="preserve"><value>仅限整数毫秒：Down / Up 为 0–60000；Delay 为 1–60000。</value></data>
+<data name="MacroSlotLabel" xml:space="preserve"><value>宏槽位</value></data>
+<data name="MacroEditSection" xml:space="preserve"><value>宏编辑</value></data><data name="BindingSection" xml:space="preserve"><value>按键绑定</value></data></root>

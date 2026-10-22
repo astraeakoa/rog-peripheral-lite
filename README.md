@@ -4,11 +4,11 @@
 
 基于 [G-Helper](https://github.com/seerge/g-helper) 的独立 Windows ROG 外设设置工具，保留原版轻量界面，增加软件宏、宏导入导出与触发方式设置。
 
-**v0.3.0 · Windows x64 · .NET 8 · GPL-3.0**
+**v0.3.1 · Windows x64 · .NET 8 · GPL-3.0**
 
 本项目是社区修改版，与 ASUS 或 G-Helper 原作者不存在官方隶属或背书关系。仅保留外设功能，不包含笔记本风扇、功耗、显卡模式、电池充电限制或驱动更新。
 
-An independent Windows peripheral utility derived from G-Helper, with software macros and JSON/CSV/AutoHotkey import/export. New pages support English, Simplified Chinese and Traditional Chinese; device pages retain upstream translations.
+An independent Windows peripheral utility derived from G-Helper, with software macros and JSON/CSV/AutoHotkey/GMAC import/export. New pages support English, Simplified Chinese and Traditional Chinese; device pages retain upstream translations.
 
 ## 界面预览
 
@@ -28,8 +28,9 @@ An independent Windows peripheral utility derived from G-Helper, with software m
 
 - 沿用上游鼠标、键盘、耳机的识别与设置模块；功能取决于型号、固件和连接方式。
 - 鼠标 DPI、回报率、灯效、配置档与按键映射等设置，以设备实际支持为准。
-- 12 个软件宏槽位：点按、按下、松开、延迟，以及三种触发方式。
-- JSON、CSV 步骤表、AutoHotkey v1/v2 按键与延迟子集的导入导出。
+- 12 个软件宏槽位：按下、松开、延迟，以及三种触发方式；点按使用 Down / Up 两行表示。
+- JSON、CSV、AutoHotkey 按键/延迟子集及 Armoury Crate 文本 GMAC 子集的导入导出。
+- 鼠标左右键宏，支持点按、按住、松开及与键盘步骤混合执行。
 - 固定窗口尺寸、竖排卡片、浅色/深色跟随、多语言和托盘常驻。
 
 ## 获取与运行
@@ -51,7 +52,7 @@ An independent Windows peripheral utility derived from G-Helper, with software m
 ## 软件宏
 
 1. 点击“宏按键”，选择槽位、填写名称并设置触发方式。
-2. 添加步骤：`Press` 点按、`Down` 按下、`Up` 松开、`Delay` 延迟（毫秒）。按键示例：`A`、`Enter`、`Space`、`LControlKey`。
+2. 在列表末尾空行添加步骤：`Down` 按下、`Up` 松开、`Delay` 等待（毫秒）。优先直接填写 Down / Up 行的“延迟”：先等待，再执行该行的动作，0 或留空表示不等待。Delay 行只等待一次指定时间，按键栏不可编辑。先选按键会默认填入 Down，先选 Down / Up 会默认填入鼠标左键。选中下一条步骤，点击“插入”，可在两条步骤之间添加动作。按键菜单沿用鼠标设置中的 Keyboard 条目，并添加鼠标左右键。旧宏或导入文件中的点按 `Press` 会在编辑器展开为 `Down`、`Up` 两行。
 3. “复制示例”可生成 Ctrl+C；也可导入文件，检查后点击“保存”。
 4. 选择鼠标与侧键，点击“绑定到此按键”，写入当前鼠标配置档。
 5. 在目标窗口测试；`Ctrl + Alt + F12` 或托盘“停止宏”可中止执行。
@@ -67,7 +68,7 @@ An independent Windows peripheral utility derived from G-Helper, with software m
 
 每个宏最多 500 步，每轮重复 1–100 次，单次延迟 1–60000 毫秒，一轮含重复的总延迟最多 10 分钟；连续/按住模式可循环至停止。同一时刻只执行一个宏，不排队。编辑内容需要手动保存。
 
-不支持鼠标轨迹录制。AHK 仅解析受支持的数据子集，不执行脚本，不支持循环、函数、表达式或完整 AHK 功能；不支持厂商专有宏文件。详见[宏格式说明](docs/MACRO_FORMATS.md)和[示例](examples)。权限更高的程序及部分游戏可能不接受模拟输入。
+仅支持鼠标左右键，不支持中键、侧键、滚轮或鼠标轨迹。AHK 仅解析受支持的数据子集，不执行脚本，也不支持完整 AHK 语法。GMAC 支持已确认的文本事件子集，末尾 `1` 作为固定标记；不包含名称、重复次数或触发方式，导出时会提示。未知 GMAC 编码会报错，导回 Armoury Crate 仍需实机确认。详见[宏格式说明](docs/MACRO_FORMATS.md)和[示例](examples)。权限更高的程序及部分游戏可能不接受模拟输入。
 
 ## 主题与语言
 

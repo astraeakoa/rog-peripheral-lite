@@ -58,7 +58,7 @@
     <value>Software macros · Keep the app running
 Slots use F13–F24 and are shared across devices.
 Ctrl + Alt + F12 stops playback; macros override combos on the same key.
-Press: tap · Down: hold · Up: release · Delay: wait (ms)</value>
+Down / Up: wait before acting · Delay: wait only (ms)</value>
   </data>
   <data xml:space="preserve" name="Name">
     <value>Name</value>
@@ -100,10 +100,10 @@ Press: tap · Down: hold · Up: release · Delay: wait (ms)</value>
     <value>Key</value>
   </data>
   <data xml:space="preserve" name="KeyHint">
-    <value>Examples: A, LControlKey, Enter, Space</value>
+    <value>Examples: A, LControlKey, Enter, Space; LButton, RButton</value>
   </data>
   <data xml:space="preserve" name="Delay">
-    <value>Delay ms</value>
+    <value>Delay</value>
   </data>
   <data xml:space="preserve" name="Save">
     <value>Save</value>
@@ -181,7 +181,7 @@ Press: tap · Down: hold · Up: release · Delay: wait (ms)</value>
     <value>Binding failed: </value>
   </data>
   <data xml:space="preserve" name="FileFilter">
-    <value>ROG macro JSON (*.json)|*.json|CSV steps (*.csv)|*.csv|AutoHotkey key script (*.ahk)|*.ahk</value>
+    <value>ROG macro JSON (*.json)|*.json|CSV steps (*.csv)|*.csv|AutoHotkey key script (*.ahk)|*.ahk|Armoury Crate GMAC (*.gmac)|*.gmac</value>
   </data>
   <data xml:space="preserve" name="FileTooLarge">
     <value>Macro file must not exceed 1 MB.</value>
@@ -196,7 +196,7 @@ Press: tap · Down: hold · Up: release · Delay: wait (ms)</value>
     <value>Unsupported JSON version.</value>
   </data>
   <data xml:space="preserve" name="FileTypes">
-    <value>Supported files: .json, .csv, .ahk.</value>
+    <value>Supported files: .json, .csv, .ahk / .gmac.</value>
   </data>
   <data xml:space="preserve" name="MissingMacro">
     <value>Macro content is missing.</value>
@@ -309,4 +309,37 @@ Press: tap · Down: hold · Up: release · Delay: wait (ms)</value>
   <data xml:space="preserve" name="PlaybackFailed">
     <value>Macro playback failed</value>
   </data>
-</root>
+  <data name="GmacKeyUnsupported" xml:space="preserve">
+    <value>This GMAC key encoding is not supported yet.</value>
+  </data>
+  <data name="GmacMarker" xml:space="preserve">
+    <value>GMAC must end with a separate line containing 1.</value>
+  </data>
+  <data name="GmacRow" xml:space="preserve">
+    <value>Unsupported or invalid GMAC event.</value>
+  </data>
+  <data name="GmacKeyMismatch" xml:space="preserve">
+    <value>GMAC key name and key codes do not match this keyboard layout.</value>
+  </data>
+  <data name="GmacLine" xml:space="preserve">
+    <value>GMAC line {0}: {1}</value>
+  </data>
+  <data name="GmacExportWarning" xml:space="preserve">
+    <value>GMAC saves steps only, not the name, trigger mode, repeats or interval. Continue?</value>
+  </data>
+  <data name="GmacExported" xml:space="preserve">
+    <value>GMAC exported with terminal marker 1. Playback settings are not included.</value>
+  </data>
+  <data name="MouseHelp" xml:space="preserve">
+    <value>Mouse: LButton (left) / RButton (right)</value>
+  </data>
+<data name="InsertStep" xml:space="preserve"><value>Insert</value></data>
+<data name="ActionDelayLimits" xml:space="preserve"><value>Action wait must be 0–60000 ms.</value></data>
+<data name="MouseRight" xml:space="preserve"><value>Right mouse button</value></data>
+<data name="DeviceLabel" xml:space="preserve"><value>Device</value></data>
+<data name="EditorHint" xml:space="preserve"><value>Down / Up: wait before acting (ms). Delay: wait only. Ctrl + Alt + F12 stops playback.</value></data>
+<data name="MouseLeft" xml:space="preserve"><value>Left mouse button</value></data>
+<data name="ButtonLabel" xml:space="preserve"><value>Button binding</value></data>
+<data name="DelayInputHint" xml:space="preserve"><value>Whole milliseconds only: Down / Up 0–60000; Delay 1–60000.</value></data>
+<data name="MacroSlotLabel" xml:space="preserve"><value>Macro slot</value></data>
+<data name="MacroEditSection" xml:space="preserve"><value>Macro editor</value></data><data name="BindingSection" xml:space="preserve"><value>Button binding</value></data></root>

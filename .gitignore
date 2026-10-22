@@ -5,6 +5,8 @@ references/
 dist/
 dist-v*/
 dist-new/
+/ROGPeripheral-win-x64/
+/MACRO_FORMATS.md
 .vs/
 .tools/
 **/ui-smoke/

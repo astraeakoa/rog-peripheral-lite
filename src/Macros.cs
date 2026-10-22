@@ -11,6 +11,23 @@ public enum MacroTrigger { Once, Toggle, Hold }
 public record MacroDefinition(string Name, List<MacroStep> Steps, int Repeat = 1, MacroTrigger Trigger = MacroTrigger.Once, int Interval = 50);
 public static class MacroStore
 {
+    public static List<MacroStep> EditorSteps(IEnumerable<MacroStep> steps)
+    {
+        var result=new List<MacroStep>();
+        foreach(var step in steps)
+        {
+            var current=step.Action=="Press"?step with {Action="Down"}:step;
+            if(current.Action!="Delay" && result.Count>0 && result[^1].Action=="Delay" && result[^1].Milliseconds+current.Milliseconds<=60000)
+            {
+                current=current with {Milliseconds=current.Milliseconds+result[^1].Milliseconds};
+                result.RemoveAt(result.Count-1);
+            }
+            result.Add(current);
+            if(step.Action=="Press")result.Add(new("Up",step.Key));
+        }
+        return result;
+    }
+    public static bool IsMouseButton(Keys key) => key is Keys.LButton or Keys.RButton;
     public static MacroDefinition? Get(int slot)
     {
         try { var macro=JsonSerializer.Deserialize<MacroDefinition>(AppConfig.GetString($"macro_{slot}") ?? "null"); if(macro!=null)Validate(macro);return macro; }
@@ -19,7 +36,7 @@ public static class MacroStore
     public static void Save(int slot, MacroDefinition macro) { Validate(macro); AppConfig.Set($"macro_{slot}", JsonSerializer.Serialize(macro)); }
     public static Keys ParseKey(string key)
     {
-        if (!Enum.TryParse<Keys>(key, true, out var parsed) || !Enum.IsDefined(parsed) || (int)parsed < 8 || (int)parsed > 254 || (parsed >= Keys.F13 && parsed <= Keys.F24))
+        if (!Enum.TryParse<Keys>(key, true, out var parsed) || !Enum.IsDefined(parsed) || ((int)parsed < 8 && !IsMouseButton(parsed)) || (int)parsed > 254 || (parsed >= Keys.F13 && parsed <= Keys.F24))
             throw new ArgumentException(L.Format("InvalidKey", key));
         return parsed;
     }
@@ -31,7 +48,9 @@ public static class MacroStore
         foreach (var step in macro.Steps)
         {
             if (step is null) throw new ArgumentException(L.Text("NullStep"));
-            if (step.Action == "Delay") { if (step.Milliseconds is < 1 or > 60000) throw new ArgumentException(L.Text("DelayLimits")); duration+=step.Milliseconds; continue; }
+            if (step.Milliseconds is <0 or >60000) throw new ArgumentException(L.Text("ActionDelayLimits"));
+            duration+=step.Milliseconds;
+            if (step.Action == "Delay") { if (step.Milliseconds is < 1 or > 60000) throw new ArgumentException(L.Text("DelayLimits")); continue; }
             if (step.Action is not ("Down" or "Up" or "Press")) throw new ArgumentException(L.Text("ActionOptions"));
             var key=ParseKey(step.Key);
             if (step.Action=="Down" && !held.Add(key)) throw new ArgumentException(L.Format("DuplicateDown", key));
@@ -45,16 +64,31 @@ public static class MacroStore
 public interface IKeyOutput { void Send(Keys key, bool up); }
 public sealed class WindowsKeyOutput : IKeyOutput
 {
-    [StructLayout(LayoutKind.Sequential)] struct INPUT { public uint type; public UNION data; }
-    [StructLayout(LayoutKind.Explicit)] struct UNION { [FieldOffset(0)] public KEYBOARD keyboard; [FieldOffset(0)] public MOUSE mouse; }
-    [StructLayout(LayoutKind.Sequential)] struct KEYBOARD { public ushort vk, scan; public uint flags, time; public UIntPtr extra; }
-    [StructLayout(LayoutKind.Sequential)] struct MOUSE { public int x,y; public uint data,flags,time; public UIntPtr extra; }
+    [StructLayout(LayoutKind.Sequential)] internal struct INPUT { public uint type; public UNION data; }
+    [StructLayout(LayoutKind.Explicit)] internal struct UNION { [FieldOffset(0)] public KEYBOARD keyboard; [FieldOffset(0)] public MOUSE mouse; }
+    [StructLayout(LayoutKind.Sequential)] internal struct KEYBOARD { public ushort vk, scan; public uint flags, time; public UIntPtr extra; }
+    [StructLayout(LayoutKind.Sequential)] internal struct MOUSE { public int x,y; public uint data,flags,time; public UIntPtr extra; }
     [DllImport("user32.dll", SetLastError=true)] static extern uint SendInput(uint count, INPUT[] input, int size);
     public void Send(Keys key, bool up)
     {
-        bool extended=key is Keys.RControlKey or Keys.RMenu or Keys.Insert or Keys.Delete or Keys.Home or Keys.End or Keys.PageUp or Keys.PageDown or Keys.Left or Keys.Right or Keys.Up or Keys.Down or Keys.LWin or Keys.RWin or Keys.Divide;
-        var input=new INPUT { type=1, data=new UNION { keyboard=new KEYBOARD { vk=(ushort)key,flags=(up?2u:0u)|(extended?1u:0u) } } };
+        var input=BuildInput(key,up);
         if (SendInput(1,[input],Marshal.SizeOf<INPUT>())!=1) throw new Win32Exception(Marshal.GetLastWin32Error(),L.Text("InputFailed"));
+    }
+    internal static INPUT BuildInput(Keys key, bool up)
+    {
+        MacroStore.ParseKey(key.ToString());
+        if (MacroStore.IsMouseButton(key))
+        {
+            uint flags=key switch
+            {
+                Keys.LButton => up ? 0x0004u : 0x0002u,
+                Keys.RButton => up ? 0x0010u : 0x0008u,
+                _ => throw new ArgumentOutOfRangeException(nameof(key))
+            };
+            return new INPUT {type=0,data=new UNION {mouse=new MOUSE {flags=flags}}};
+        }
+        bool extended=key is Keys.RControlKey or Keys.RMenu or Keys.Insert or Keys.Delete or Keys.Home or Keys.End or Keys.PageUp or Keys.PageDown or Keys.Left or Keys.Right or Keys.Up or Keys.Down or Keys.LWin or Keys.RWin or Keys.Divide;
+        return new INPUT { type=1, data=new UNION { keyboard=new KEYBOARD { vk=(ushort)key,flags=(up?2u:0u)|(extended?1u:0u) } } };
     }
 }
 public sealed class MacroRunner(IKeyOutput output)
@@ -76,7 +110,8 @@ public sealed class MacroRunner(IKeyOutput output)
             for(int repeat=0;repeat<macro.Repeat;repeat++) foreach(var step in macro.Steps)
             {
                 cts.Token.ThrowIfCancellationRequested();
-                if(step.Action=="Delay") { await Task.Delay(step.Milliseconds,cts.Token).ConfigureAwait(false); continue; }
+                if(step.Milliseconds>0)await Task.Delay(step.Milliseconds,cts.Token).ConfigureAwait(false);
+                if(step.Action=="Delay")continue;
                 var key=MacroStore.ParseKey(step.Key);
                 if(step.Action!="Up") { output.Send(key,false); held.Add(key); }
                 if(step.Action!="Down") { output.Send(key,true); held.Remove(key); }

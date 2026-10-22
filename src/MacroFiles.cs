@@ -35,6 +35,7 @@ public static class MacroFiles
         }
         else if(extension.Equals(".csv",StringComparison.OrdinalIgnoreCase)) macro=ParseCsv(content,name);
         else if(extension.Equals(".ahk",StringComparison.OrdinalIgnoreCase)) macro=ParseAhk(content,name);
+        else if(extension.Equals(".gmac",StringComparison.OrdinalIgnoreCase)) macro=GmacFile.Parse(content,name);
         else throw new FormatException(L.Text("FileTypes"));
         if(macro is null) throw new FormatException(L.Text("MissingMacro"));
         MacroStore.Validate(macro);return macro;
@@ -155,6 +156,7 @@ public static class MacroFiles
     public static string Export(MacroDefinition macro,string extension)
     {
         MacroStore.Validate(macro);
+        if(extension.Equals(".gmac",StringComparison.OrdinalIgnoreCase))return GmacFile.Export(macro);
         if(extension.Equals(".json",StringComparison.OrdinalIgnoreCase))return JsonSerializer.Serialize(new Envelope(1,macro),Json);
         string metadata=JsonSerializer.Serialize(new Metadata(macro.Name,macro.Repeat,macro.Trigger,macro.Interval),new JsonSerializerOptions(Json){WriteIndented=false});
         var result=new StringBuilder();
@@ -168,8 +170,9 @@ public static class MacroFiles
             result.AppendLine("; ROGPeripheral "+metadata).AppendLine("; AHK v2 step sequence only. Repeat/trigger/interval are metadata for ROG Peripheral.").AppendLine("#Requires AutoHotkey v2.0");
             foreach(var s in macro.Steps)
             {
-                if(s.Action=="Delay"){result.AppendLine($"Sleep {s.Milliseconds}");continue;}
-                var key=MacroStore.ParseKey(s.Key);string ahk=$"vk{(int)key:X2}";
+                if(s.Milliseconds>0)result.AppendLine($"Sleep {s.Milliseconds}");
+                if(s.Action=="Delay")continue;
+                var key=MacroStore.ParseKey(s.Key);string ahk=MacroStore.IsMouseButton(key)?key.ToString():$"vk{(int)key:X2}";
                 result.AppendLine($"Send \"{{{ahk}{(s.Action=="Press"?"":" "+s.Action.ToLowerInvariant())}}}\"");
             }
         }
